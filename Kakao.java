@@ -9,8 +9,12 @@ public class Kakao {
         Stack<Integer> stack = new Stack<Integer>(); // 바구니
 
         for (int i = 0; i < moves.length; i++) { // 작동횟수만큼
+
             for (int j = 0; j < board.length; j++) { // 게임판크기만큼(정사각)
-                if (board[j][j] != 0) {
+                System.out.println(moves[i] + ":" + board[j][moves[i]- 1 ]);
+                if (board[j][moves[i] - 1] != 0) { // board[0][1]
+                    // moves[0] = 1
+                    // moves[1] =5
 
                 } else {
 
