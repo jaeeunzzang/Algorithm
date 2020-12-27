@@ -27,8 +27,8 @@ public class Kakao {
 
                 }
             }
-        
-        
+
+        }
         return answer;
 
     }
@@ -40,4 +40,5 @@ public class Kakao {
         int moves[] = { 1, 5, 3, 5, 1, 2, 1, 4 };
         System.out.println(kakao.solution(board, moves));
     }
+
 }
