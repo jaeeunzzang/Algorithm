@@ -1,9 +1,10 @@
+package programmers.kakao;
 
 import java.util.*;
 
 public class Kakao {
 
-    public int solution(int[][] board, int[] moves) {
+	public int solution(int[][] board, int[] moves) {
 		int answer = 0;
 
 		Stack<Integer> stack = new Stack<Integer>(); // 바구니
@@ -17,7 +18,7 @@ public class Kakao {
 						board[j][moves[i] - 1] = 0;
 						System.out.println("first push: " + stack);
 						break;
-					} else { //비어있지 않을때
+					} else { // 비어있지 않을때
 						if (stack.peek() == board[j][moves[i] - 1]) {// 스택의 top값과 보드의 값이 같으면
 							System.out.println("stack:" + stack);
 							System.out.println("moves:" + moves[i]);
@@ -26,7 +27,7 @@ public class Kakao {
 							answer += 2; // +2해준다..
 							System.out.println("pop stack:" + stack);
 							break;
-						} else { //top값과 보드의 값이 같지 않으면
+						} else { // top값과 보드의 값이 같지 않으면
 							stack.push(board[j][moves[i] - 1]); // 맨위에 있는거 스택에 넣어준다
 							board[j][moves[i] - 1] = 0; // 인형을 빼간곳은 0으로 바꿔준다
 							System.out.println("push stack:" + stack);
