@@ -4,36 +4,40 @@ import java.util.*;
 public class Kakao {
 
     public int solution(int[][] board, int[] moves) {
-        int answer = 0;
-        int index = 0;
-        Stack<Integer> stack = new Stack<Integer>(); // 바구니
+		int answer = 0;
+		int index = 0;
+		Stack<Integer> stack = new Stack<Integer>(); // 바구니
 
-        for (int i = 0; i < moves.length; i++) { // 작동횟수만큼
+		for (int i = 0; i < moves.length; i++) { // 작동횟수만큼
 
-            for (int j = 0; j < board.length; j++) { // 게임판크기만큼(정사각)
-                System.out.println(moves[i] + ":" + board[j][moves[i] - 1]);
-                if (board[j][moves[i] - 1] != 0) { // 각 열(moves)의 깊이 탐색(위에서 아래로)
-                    if (stack) { //바구니에 같은인형이 두개 붙어있으면
-                        answer += 2; //+2해준다..
-                    }
-                    // 배열은 0부터 시작이니까 moves[i]-1로 해준다
-                    // 0이 아니면(인형이 있으면)
-                    // board[0][0]
-                    // board[1][0]
-                    // board[2][0]
-                    stack.push(board[j][moves[i] - 1]); // 맨위에 있는거 스택에 넣어준다
-                    board[j][moves[i] - 1] = 0; // 인형을 빼간곳은 0으로 바꿔준다
-                    System.out.println(stack);
-                    break; // break해서 다음 moves로 간다
-                } else {
+			for (int j = 0; j < board.length; j++) { // 게임판크기만큼(정사각)
+				System.out.println(moves[i] + ":" + board[j][moves[i] - 1]);
+				if (board[j][moves[i] - 1] != 0) { // 각 열(moves)의 깊이 탐색(위에서 아래로)
+					if (!stack.isEmpty()) { //바구니가  비어있지 않고
+						if (stack.peek() == board[j][moves[i] - 1]) {//스택의 top값과 보드의 값이 같으면 
+							stack.pop(); //pop하고
+							answer += 2; // +2해준다..
+							break;
+						}
+					}
+					// 배열은 0부터 시작이니까 moves[i]-1로 해준다
+					// 0이 아니면(인형이 있으면)
+					// board[0][0]
+					// board[1][0]
+					// board[2][0]
+					stack.push(board[j][moves[i] - 1]); // 맨위에 있는거 스택에 넣어준다
+					board[j][moves[i] - 1] = 0; // 인형을 빼간곳은 0으로 바꿔준다
+					System.out.println(stack);
+					break; // break해서 다음 moves로 간다
+				} else {
 
-                }
-            }
+				}
+			}
 
-        }
-        return answer;
+		}
+		return answer;
 
-    }
+	}
 
     public static void main(String[] args) {
         Kakao kakao = new Kakao();
