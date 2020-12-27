@@ -18,13 +18,19 @@ public class Kakao {
                     // board[0][0]
                     // board[1][0]
                     // board[2][0]
-                    stack.push(board[j][moves[i] - 1]);
+                    stack.push(board[j][moves[i] - 1]); // 맨위에 있는거 스택에 넣어준다
+                    System.out.println(stack);
+
+                    break;
+
                 } else {
 
                 }
             }
-        }
+        
+        
         return answer;
+
     }
 
     public static void main(String[] args) {
