@@ -11,11 +11,14 @@ public class Kakao {
         for (int i = 0; i < moves.length; i++) { // 작동횟수만큼
 
             for (int j = 0; j < board.length; j++) { // 게임판크기만큼(정사각)
-                System.out.println(moves[i] + ":" + board[j][moves[i]- 1 ]);
-                if (board[j][moves[i] - 1] != 0) { // board[0][1]
-                    // moves[0] = 1
-                    // moves[1] =5
-
+                System.out.println(moves[i] + ":" + board[j][moves[i] - 1]);
+                if (board[j][moves[i] - 1] != 0) { // 각 열(moves)의 깊이 탐색(위에서 아래로)
+                    // 배열은 0부터 시작이니까 moves[i]-1로 해준다
+                    // 0이 아니면(인형이 있으면)
+                    // board[0][0]
+                    // board[1][0]
+                    // board[2][0]
+                    stack.push(board[j][moves[i] - 1]);
                 } else {
 
                 }
