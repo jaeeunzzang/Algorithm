@@ -19,9 +19,9 @@ public class Kakao {
                     // board[1][0]
                     // board[2][0]
                     stack.push(board[j][moves[i] - 1]); // 맨위에 있는거 스택에 넣어준다
+                    board[j][moves[i] - 1] = 0; //인형을 빼간곳은 0으로 바꿔준다
                     System.out.println(stack);
-
-                    break;
+                    break; // break해서 다음 moves로 간다
 
                 } else {
 
