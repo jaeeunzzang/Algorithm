@@ -21,7 +21,6 @@ public class Arr_10818 {
                 min = arr[i];
             }
         }
-        // 20 10 35 30 7
 
         System.out.println(min + " " + max);
     }
