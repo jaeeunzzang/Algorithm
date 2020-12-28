@@ -11,7 +11,7 @@ public class Arr_1546 {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextDouble(); // 시험 점수 입력받기(더블형)
         }
-
+        sc.close();
         for (double a : arr) {
             if (a > max) {
                 max = a; // 최대값 설정

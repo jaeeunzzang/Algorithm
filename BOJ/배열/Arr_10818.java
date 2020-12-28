@@ -11,7 +11,7 @@ public class Arr_10818 {
         for (int i = 0; i < arr.length; i++) { // 입력받기
             arr[i] = sc.nextInt();
         }
-
+        sc.close();
         int min = arr[0], max = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > max) {

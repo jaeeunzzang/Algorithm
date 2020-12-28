@@ -8,6 +8,7 @@ public class Arr_2577 {
         int arr[] = new int[10]; // 배열선언
         // int a = 150, b = 266, c = 427;
         int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt(); // 정수입력받기
+        sc.close();
         int mul = a * b * c; // 곱하기
         // System.out.println("mul:" + mul);
         while (true) {

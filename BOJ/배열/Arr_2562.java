@@ -11,6 +11,7 @@ public class Arr_2562 {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
+        sc.close();
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > max) {
                 max = arr[i];
