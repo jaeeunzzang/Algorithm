@@ -3,6 +3,7 @@ package programmers.hash;
 public class 마라톤완주 {
 
     public String solution(String[] participant, String[] completion) {
+        // 효율성을 고민해봅시다.
         String answer = "";
         for (int i = 0; i < completion.length; i++) {
             for (int j = 0; j < participant.length; j++) {
