@@ -3,8 +3,11 @@ package programmers.hash;
 import java.util.Arrays;
 
 public class 마라톤완주 {
-
     public String solution(String[] participant, String[] completion) {
+        return "";
+    }
+
+    public String solution2(String[] participant, String[] completion) {
         // 효율성을 고민해봅시다.
         // 해시 이용할 것
 
