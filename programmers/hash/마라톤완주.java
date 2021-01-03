@@ -1,9 +1,12 @@
 package programmers.hash;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class 마라톤완주 {
     public String solution(String[] participant, String[] completion) {
+        HashMap hm = new HashMap<>();
+        hm.put(key, value);
         return "";
     }
 
