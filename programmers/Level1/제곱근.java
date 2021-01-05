@@ -5,7 +5,7 @@ public class 제곱근 {
         long answer = 0;
         long sqrt = (long) Math.sqrt(n);
 
-        if (sqrt * sqrt == n) {
+        if (sqrt * sqrt == n) { // 제곱근을 다시 제곱했을때 값이 n과 같으면
             sqrt += 1;
             answer = sqrt * sqrt;
             return answer;
