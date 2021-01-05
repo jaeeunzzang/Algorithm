@@ -7,26 +7,26 @@ public class 시저암호 {
         char c[] = s.toCharArray();
         for (int i = 0; i < c.length; i++) {
             if (c[i] == ' ') { // 공백일때는 넘어감
-                System.out.print(c[i]);
-                continue;
+
+            } else {
+                c[i] += n;
             }
-            c[i] += n; // 거리만큼 더해준다
             System.out.print(c[i]);
         }
 
         for (int i = 0; i < c.length; i++) {
-            if ((int) c[i] >= 122) { // c[i]의 값이 소문자 z와 같거나, 넘어갈때
-                c[i] = (char) (c[i] - 26); // 26만큼 빼준다
-
+            if (c[i] - n <= 90) { // 처음에 들어온 문자가 대문자일때
+                if (c[i] >= 90 && c[i] < 115) {
+                    c[i] = (char) (c[i] - 26);
+                }
             }
-            if (c[i] >= 90) {
+            if (c[i] >= 122 && c[i] < 147) {
                 c[i] = (char) (c[i] - 26);
-
             }
         }
 
         for (char i : c) {
-            answer += i; // 공백 32
+            answer += i;
         }
         return answer;
     }
@@ -36,6 +36,5 @@ public class 시저암호 {
         String s = "a Z z";
         int n = 4;
         System.out.println(fc.solution(s, n)); // e D d
-
     }
 }
