@@ -8,7 +8,7 @@ public class 시저암호 {
         for (int i = 0; i < c.length; i++) {
             if (c[i] == ' ') { // 공백일때는 넘어감
 
-            } else {
+            } else { // 거리만큼 더해줌
                 c[i] += n;
             }
             System.out.print(c[i]);
@@ -16,7 +16,7 @@ public class 시저암호 {
 
         for (int i = 0; i < c.length; i++) {
             if (c[i] - n <= 90) { // 처음에 들어온 문자가 대문자일때
-                if (c[i] >= 90 && c[i] < 115) {
+                if (c[i] >= 90 && c[i] < 115) { // z를 넘어가면
                     c[i] = (char) (c[i] - 26);
                 }
             }
