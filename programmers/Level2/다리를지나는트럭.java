@@ -8,29 +8,34 @@ public class 다리를지나는트럭 {
         int answer = 0; // 걸리는 시간
         int weight_sum = 0; // 다리위에 올라와있는 트럭의 무게 합
         Queue<Integer> bridge = new LinkedList<Integer>(); // que 구현은 linked list로 한다.
-        // 현재 다리위에 올라와있는 트럭의 리스트를 저장할 bridge 생성.
+        // 현재 다리위에 올라와있는 트럭들을 저장할 bridge 생성.
 
-        /* 길이 내에서 여러트럭이 순차적으로 진입해도 제한무게를 넘지 않는경우? */
         for (int i = 0; i < truck_weights.length; i++) { // 트럭 갯수만큼 반복
-            while (true) { // 반복
-                if (bridge.isEmpty()) { // 다리가 비어있는 경우
+            while (true) {
+                if (bridge.isEmpty()) { // 다리가 비어있는 경우(제일 처음 수행)
                     bridge.add(truck_weights[i]); // 트럭을 추가해준다.
-                    weight_sum += truck_weights[i];
+                    weight_sum += truck_weights[i]; // 무게를 더해주고
                     answer++; // 시간 증가
                     break; // 루프 탈출 . 다음 트럭 시작
                 }
-                if (bridge.size() == bridge_length) { // 다리 길이만큼 트럭이 다 올라와있는경우
+
+                if (bridge.size() == bridge_length) { // 큐(다리)가 다리길이만큼 차 있는경우.
                     weight_sum -= bridge.poll();// 다리에서 트럭을 빼주고 그 무게만큼 sum에서 빼준다.
                     /* poll: 가장 앞에 들어간 값을 반환하고 제거 */
 
                 }
-                if (truck_weights[i] < weight) { // 트럭무게가 제한무게보다 적을때
-                    bridge.offer(truck_weights[i]); // 큐에 트럭을 넣고
+                if (weight_sum + truck_weights[i] <= weight) { // 다리위에 올라가있는 트럭무게의 합과 다음트럭의 무게를 더한 값이 제한무게보다 적거나 같을때
+                    bridge.add(truck_weights[i]); // 큐에 트럭을 넣고
                     answer++; // 시간을 증가
+                    weight_sum += truck_weights[i];
+                    break; // 다음트럭 시작
+                } else if (weight_sum + truck_weights[i] > weight) { // 제한무게를 넘을때
+                    answer++;
+                    bridge.add(0); // 0무게 추가. 큐 size는 증가, 무게는 변화없음.
                 }
             }
         }
-        return answer;
+        return answer + bridge_length; // 다리길이만큼 시간 더해준다.
     }
 
     public static void main(String[] args) {
