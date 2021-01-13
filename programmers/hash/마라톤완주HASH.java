@@ -50,7 +50,7 @@ public class 마라톤완주HASH {
 	}
 
 	public static void main(String[] args) {
-		Hash fun = new Hash();
+		마라톤완주HASH fun = new 마라톤완주HASH();
 		String[] participant = { "marina", "josipa", "nikola", "vinko", "filipa"};
 		String[] completion = { "josipa", "filipa", "marina", "nikola"};
 		System.out.println(fun.solution(participant, completion));
