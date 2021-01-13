@@ -3,7 +3,28 @@ package programmers.hash;
 import java.util.HashMap;
 
 public class 마라톤완주HASH {
-   public String solution(String[] participant, String[] completion) {
+	
+	public String solution(String[] participant, String [] completion) {
+		String answer="";
+		HashMap<String, Integer> map=new HashMap<>();
+		for(String player:participant) {
+			map.put(player, map.getOrDefault(player,0)+1);
+			//getOrDefault(key,default)-> key값에 map을 넣어준다. value에 1 더해준다. ->중복되면 value는 2가 된다.
+			//System.out.println(map);
+		}
+	//	System.out.println(map.get(key)); -> value반환
+		for(String player:completion) {
+			map.put(player, map.get(player)-1); //value 를 -1씩해준다
+		}
+		for(String key:map.keySet()) { //map의 키 갯수만큼
+			if(map.get(key)!=0) { //value가 0이 아니면
+				return key; 
+			}
+		}
+			return answer;
+	}
+	
+   public String solution2(String[] participant, String[] completion) {
 
 		HashSet<String> set = new HashSet<>();
 
