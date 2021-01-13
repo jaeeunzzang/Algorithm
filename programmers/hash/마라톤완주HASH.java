@@ -23,8 +23,8 @@ public class 마라톤완주HASH {
 		}
 			return answer;
 	}
-	
-   public String solution2(String[] participant, String[] completion) {
+	/*hashSet은 실패. 테스트케이스 추가 필요*/
+   public String solution2(String[] participant, String[] completion) { 
 
 		HashSet<String> set = new HashSet<>();
 
