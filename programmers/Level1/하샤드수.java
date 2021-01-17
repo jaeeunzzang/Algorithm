@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class 하샤드수 {
 
     public boolean solution(int x) {
-        boolean answer = true;
+        boolean answer = false;
         int num = x;
         int cnt = 0;
         int sum = 0;
@@ -17,9 +17,9 @@ public class 하샤드수 {
             num = num / 10;
             cnt++;
         }
-        System.out.println(sum);
+
         if (x % sum == 0) {
-            answer = false;
+            answer = true;
         }
         return answer;
     }
