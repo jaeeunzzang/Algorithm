@@ -19,7 +19,7 @@ public class 하샤드수 {
         }
 
         if (x % sum == 0) {
-            answer = true;
+            return true;
         }
         return answer;
     }
