@@ -18,6 +18,9 @@ public class 하샤드수 {
             cnt++;
         }
         System.out.println(sum);
+        if (x % sum == 0) {
+            answer = false;
+        }
         return answer;
     }
 
