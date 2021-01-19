@@ -14,7 +14,8 @@ public class 정수배열 {
                 set.add(numbers[i] + numbers[j]);
             }
         }
-        List li = new ArrayList<>(set);
+        ArrayList<Integer> li = new ArrayList<Integer>(set);
+        System.out.println(li);
         // li.sort(asc);
         return set;
     }
