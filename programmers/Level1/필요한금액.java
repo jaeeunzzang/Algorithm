@@ -3,8 +3,12 @@ package programmers.Level1;
 public class 필요한금액 {
     public int solution(int[] d, int budget) {
         int answer = 0;
+        int sum = 0;
         for (int i = 0; i < d.length; i++) {
-
+            if (sum >= budget) {
+                break;
+            }
+            sum += d[i];
         }
         return answer;
     }
