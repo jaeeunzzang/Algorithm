@@ -2,7 +2,6 @@ package programmers.Level1;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 
 public class 정수배열 {
     public HashSet<Integer> solution(int[] numbers) {
@@ -17,6 +16,7 @@ public class 정수배열 {
         ArrayList<Integer> li = new ArrayList<Integer>(set);
         System.out.println(li);
         // li.sort(asc);
+        // 왜 안될까...왜.....ㅜㅜ
         return set;
     }
 
