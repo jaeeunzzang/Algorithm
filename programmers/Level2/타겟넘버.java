@@ -8,6 +8,8 @@ public class 타겟넘버 {
 
     public static void main(String[] args) {
         타겟넘버 fc = new 타겟넘버();
+        int[] numbers = {};
+        int target = 3;
         fc.solution(numbers, target);
     }
 }
