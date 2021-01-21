@@ -8,8 +8,9 @@ public class 타겟넘버 {
 
     public static void main(String[] args) {
         타겟넘버 fc = new 타겟넘버();
-        int[] numbers = {};
+        int[] numbers = { 1, 1, 1, 1, 1 };
         int target = 3;
-        fc.solution(numbers, target);
+        System.out.println(fc.solution(numbers, target));
+        // answer=5
     }
 }
