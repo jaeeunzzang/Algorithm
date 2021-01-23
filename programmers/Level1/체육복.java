@@ -3,7 +3,9 @@ package programmers.Level1;
 public class 체육복 {
     public int solution(int n, int[] lost, int[] reverse) {
         int answer = 0;
-
+        for(int i=0;i<n;i++){
+            if()
+        }
         return answer;
     }
 
