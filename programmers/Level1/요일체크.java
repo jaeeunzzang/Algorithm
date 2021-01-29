@@ -41,7 +41,7 @@ public class 요일체크 {
                 answer = "WED";
                 break;
             default:
-                answer = "TUR";
+                answer = "THU";
                 break;
         }
         return answer;
