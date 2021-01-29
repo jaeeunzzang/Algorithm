@@ -11,10 +11,14 @@ public class 요일체크 {
             switch (mon) {
                 case 1, 3, 5, 7, 8, 10, 12:
                     cnt += 31;
+                    break;
                 case 2:
                     cnt += 29;
+                    break;
+
                 default:
                     cnt += 30;
+                    break;
             }
         }
         System.out.println(cnt);
