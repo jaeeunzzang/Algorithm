@@ -5,8 +5,6 @@ public class 요일체크 {
         String answer = "";
         int cnt = 0;
         int mon = 1;
-        int day = 1;
-        String date = "FRI";
         for (mon = 1; mon < a; mon++) {
             switch (mon) {
                 case 1, 3, 5, 7, 8, 10, 12:
@@ -21,26 +19,29 @@ public class 요일체크 {
                     break;
             }
         }
-        System.out.println(cnt);
         cnt += b;
-        System.out.println(cnt);
         // 364 일
         switch (cnt % 7) {
             case 1:
-                System.out.println(1);
+                answer = "FRI";
                 break;
             case 2:
-                System.out.println(2);
+                answer = "SAT";
+                break;
             case 3:
-                System.out.println(3);
+                answer = "SUN";
+                break;
             case 4:
-                System.out.println(4);
+                answer = "MON";
+                break;
             case 5:
-                System.out.println(5);
+                answer = "TUE";
+                break;
             case 6:
-                System.out.println(6);
+                answer = "WED";
+                break;
             default:
-                System.out.println(7);
+                answer = "TUR";
                 break;
         }
         return answer;
