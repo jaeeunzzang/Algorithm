@@ -7,6 +7,6 @@ public class Babbling{
        return answer;
    }
     public static void main(String[]args){
-
+            Babbling fn = new Babbling();
         }
 }
