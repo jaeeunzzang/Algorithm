@@ -5,6 +5,7 @@ package programmers.Level0;
 두 분수를 더한 값을 기약 분수로 나타냈을 때
 분자와 분모를 순서대로 담은 배열을 return 하도록.*/
 
+
 //처음부터 분모가 같은경우일수도있음.
 //최대공약수, 최소공배수 구해서 접근
 // 최대공약수 : 두 수를 나눠서 나머지가 0 인것중에 젤 큰수...
@@ -22,7 +23,6 @@ public class Irreducible_fraction {
                 gcd = i;
             }
         }
-
         return gcd;
     }
 
@@ -30,14 +30,15 @@ public class Irreducible_fraction {
         int[] answer = new int[2];
         
         int num3 = num1 * num2;
-        int gcd = fn.getGcd(num1,num2);
-        System.out.println("gcd = " + gcd);
-        int lcm = num3 / gcd;
-        System.out.println("lcm = " + lcm);
-
         int left_num = denum1 * num2;
         int right_num = denum2 * num1;
         int sum = left_num+right_num;
+
+        int gcd = fn.getGcd(num3,sum);
+        int lcm = num3 / gcd;
+
+        answer[0] = sum/gcd;
+        answer[1] = lcm;
 
         System.out.println(answer[0]);
         System.out.println(answer[1]);
@@ -45,6 +46,6 @@ public class Irreducible_fraction {
     }
 
     public static void main(String[] args) {
-        fn.solution(9,2,1,2);
+        fn.solution(9,2,1,3);
     }
 }
