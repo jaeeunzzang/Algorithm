@@ -8,5 +8,6 @@ public class Babbling{
    }
     public static void main(String[]args){
             Babbling fn = new Babbling();
+            fn.solution();
         }
 }
