@@ -1,7 +1,7 @@
 package programmers.Level0;
 
 import java.util.*;
-
+//배열의 중앙값 구하기
 public class Middel {
     public int solution(int[] array){
         int m = (array.length/2) ; //바보ㅜ 인덱스 0부터임
